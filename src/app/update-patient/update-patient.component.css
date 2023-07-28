@@ -1,0 +1,157 @@
+.add-new-patient {
+  background-color: rgba(224, 224, 224, 0.134);
+  min-height: 100vh;
+}
+
+.head {
+  width: fit-content;
+  padding: 30px 0;
+  margin: auto;
+  color: rgb(10, 67, 71);
+  font-weight: 400;
+  font-size: 2.2rem;
+}
+
+.exit {
+
+  position: absolute;
+  top: 40px;
+  left: calc(100% - 120px);
+  font-size: 1.6rem;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: 0.2s;
+
+}
+
+.exit:hover {
+  background-color: rgba(209, 209, 209, 0.534);
+  transform: scale(1.05);
+}
+
+.invalid {
+  color: red;
+  width: 40%;
+  position: absolute;
+  text-align: center;
+  top: 80px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  left: 450px;
+  background-color: rgb(219, 192, 192);
+}
+
+.valid {
+  color: rgb(2, 175, 2);
+  width: 25%;
+  position: absolute;
+  top: 80px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  left: 550px;
+  background-color: rgb(181, 225, 187);
+}
+
+.flex-contain {
+  display: flex;
+  justify-content: space-between;
+}
+
+.img {
+  background-image: url('src/assets/images/55051.png');
+  width: 30rem;
+  height: 30rem;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 30px auto;
+
+}
+
+.form-tag {
+  width: 55%;
+  margin: auto;
+  background-color: white;
+  border-radius: 30px;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  box-shadow: 1px 1px 13px #92929280;
+}
+
+.left-form {
+  width: 48%;
+}
+
+.right-form {
+  width: 48%;
+}
+
+.add-button {
+  width: 70%;
+  margin: 10px auto 0;
+  border: 0;
+  outline: 0;
+  height: 40px;
+  border-radius: 10px;
+  color: white;
+  background-color: rgb(31, 171, 173);
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: 0.3s;
+
+}
+
+.add-button:hover {
+  box-shadow: 0px 1px 13px rgb(50, 234, 237);
+  background-color: rgb(36, 192, 195);
+}
+
+
+label {
+  font-weight: 500;
+  display: block;
+  margin-top: 5px;
+}
+
+input[type="text"],
+[type="number"],
+[type="datetime"] {
+  width: 100%;
+  height: 30px;
+  margin-bottom: 10px;
+  border: 1px solid rgb(185, 185, 185);
+  border-radius: 5px;
+  outline-color: transparent;
+  text-align: center;
+  transition: 0.5s;
+}
+
+input[type="text"]:focus,
+[type="number"]:focus,
+[type="datetime"]:focus {
+  outline-color: rgb(41, 173, 255);
+}
+
+input[type="file"] {
+  margin-bottom: 15px;
+}
+
+input[type="radio"] {
+  margin: 30px 0;
+}
+
+textarea {
+  width: 100%;
+  height: 60px;
+  border: 1px solid rgb(185, 185, 185);
+  border-radius: 5px;
+  outline-color: transparent;
+  transition: 0.5s;
+}
+
+textarea:focus {
+  outline-color: rgb(24, 141, 143);
+}

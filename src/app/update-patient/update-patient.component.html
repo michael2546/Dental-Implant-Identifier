@@ -1,0 +1,96 @@
+<div class="add-new-patient">
+    <div class="add-container">
+
+        <div class="head-exit">
+
+            <h1 class="head">Update Patient</h1>
+            <a class='exit' (click)="myPatients()">✖️</a>
+
+        </div>
+
+        <div class="valid" *ngIf="showSuccessMessage">{{successMessage}}</div>
+        <div class="invalid" *ngIf="showErrorMessage">{{errorMessage}}</div>
+
+        <div class="flex-contain">
+            <form class="form-tag" (submit)="updatePatient()">
+
+                <div class="left-form">
+                    <label for="name">Patient name :</label>
+                    <input type="text" id="name" name="name" [(ngModel)]="name">
+
+                    <label for="patientId">Patient Id :</label>
+                    <input type="text" id="patientId" name="patientId" [(ngModel)]="patientId">
+
+                    <label for="attendingDentist">Attending Dentist :</label>
+                    <input type="text" id="attendingDentist" name="attendingDentist" [(ngModel)]="attendingDentist">
+
+                    <label for="age">Age :</label>
+                    <input type="number" id="age" name="age" [(ngModel)]="age">
+
+                    <label for="phone">Phone :</label>
+                    <input type="number" id="phone" name="phone" [(ngModel)]="phone">
+
+                    <label for="implant">Implant Type :</label>
+                    <input type="text" id="implant" name="implant" [(ngModel)]="implant">
+
+                    <label for="numOfImplants">Number Of Implants :</label>
+                    <input type="number" id="numOfImplants" name="numOfImplants" [(ngModel)]="numOfImplants">
+                </div>
+
+
+                <div class="right-form">
+
+                    <label for="image">Implant X-ray Image :</label>
+                    <input type="file" id="image" name="image" (change)="onImageChange($event)" class="upload-img">
+
+                    <label for="feedback">Diagnosis :</label>
+                    <textarea class="textarea" id="feedback" name="feedback" [(ngModel)]="feedback"></textarea>
+
+                    <label for="lastVisitDate">Last visit date :
+                        <br>
+                        <input type="datetime" id="lastVisitDate" name="lastVisitDate" [(ngModel)]="lastVisitDate">
+                    </label>
+
+                    <label>
+                        Diabetes: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="radio" name="diabetes" [(ngModel)]="diabetes" value="true">
+                        Yes&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="radio" name="diabetes" [(ngModel)]="diabetes" value="false">
+                        No
+                    </label>
+
+                    <label>
+                        Hypertension: &nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="radio" name="Hypertension" [(ngModel)]="hypertension" value="true">
+                        Yes&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="radio" name="Hypertension" [(ngModel)]="hypertension" value="false">
+                        No
+                    </label>
+
+                    <label>
+                        Allergy:
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="radio" name="Allergy" [(ngModel)]="allergy" value="true">
+                        Yes&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="radio" name="Allergy" [(ngModel)]="allergy" value="false">
+                        No
+                    </label>
+
+                    <label>
+                        Gender:
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="radio" name="gender" [(ngModel)]="gender" value="Male"> Male&nbsp;&nbsp;&nbsp;
+                        <input type="radio" name="gender" [(ngModel)]="gender" value="Female"> Female
+                    </label>
+                </div>
+
+                <button type="submit" class="add-button">Update</button>
+
+            </form>
+
+            <div class="img"></div>
+
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,149 @@
+<div class="profile">
+
+    <h1 class="title">My Profile</h1>
+
+    <nav class="implant-mind">
+        <a (click)="homeRouter()" class="logo">
+            <img src="assets/images/logo2.png" alt="Logo">
+        </a>
+
+        <a (click)="homeRouter()" class="logo2">
+            IMPLANT<span class="ai2">MIND</span>
+        </a>
+    </nav>
+
+
+    <div class="content">
+
+        <div class="left-nav">
+
+            <div>
+                <div #imageElement class="upload-img" (click)="uploadimg()">
+                    <div class="on-hover">
+                        <div></div>
+                    </div>
+                    <input id="file-input" #fileInput type="file" (change)="fileChanged($event)">
+
+                </div>
+                <h1 class="doctor-name">Dr. {{doctorInfo.first_name}}</h1>
+            </div>
+
+
+            <div class="user-email">
+                <h5 class="user-email-h">Username</h5>
+                <h5 class="user-email-data">{{doctorInfo.username}}</h5>
+
+                <h5 class="user-email-h">Email</h5>
+                <h5 class="user-email-data">{{doctorInfo.email}}</h5>
+            </div>
+
+            <div class="change-logout-btns">
+                <button class="change-logout-btn" (click)="Change(doctorInfo.username)">Change my info</button>
+                <button class="change-logout-btn" (click)="logOut()">LogOut</button>
+            </div>
+
+        </div>
+
+
+
+        <div class="right-side">
+
+            <div class="search-and-add">
+                <input class="search" type="search" placeholder="Search..." [(ngModel)]="searchText">
+                <button class="add-button" (click)="AddPatientForm(username!)">➕ Add New Patient</button>
+            </div>
+
+
+            <div class="patients-list">
+
+                <table class="table-container">
+
+                    <thead>
+                        <tr>
+                            <th>PatientID</th>
+                            <th>Name</th>
+                            <th>Implant</th>
+                            <th>Dentist</th>
+                            <th>Age</th>
+                            <th>Phone</th>
+                            <th>#Implants</th>
+                            <th>Allergy</th>
+                            <th>Diabetes</th>
+                            <th>Hypertension</th>
+                            <th>Gender</th>
+                            <th>Last Visit</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr *ngFor="let patient of patients | search:searchText" (click)="viewPatientRoute(
+                            username!,
+                            patient.id,
+                            patient.patientId,
+                            patient.name,
+                            patient.implant,
+                            patient.attendingDentist,
+                            patient.age,
+                            patient.phone,
+                            patient.numOfImplants,
+                            patient.diabetes,
+                            patient.allergy,
+                            patient.hypertension,
+                            patient.gender , 
+                            patient.feedback,
+                            patient.lastVisitDate,
+                            patient.image)">
+                            <td class="cell-limit">{{ patient.patientId }}</td>
+                            <td class="cell-limit">{{ patient.name }}</td>
+                            <td class="cell-limit">{{ patient.implant }}</td>
+                            <td class="cell-limit">{{ patient.attendingDentist }}</td>
+                            <td class="cell-limit">{{ patient.age }}</td>
+                            <td class="cell-limit">{{ patient.phone }}</td>
+                            <td class="cell-limit">{{ patient.numOfImplants }}</td>
+                            <td class="cell-limit">{{ patient.allergy }}</td>
+                            <td class="cell-limit">{{ patient.diabetes }}</td>
+                            <td class="cell-limit">{{ patient.hypertension }}</td>
+                            <td class="cell-limit">{{ patient.gender }}</td>
+                            <td class="cell-limit">{{ patient.lastVisitDate }}</td>
+
+                            <td class="table-cell">
+                                <button class="edit-delete-btn update" (click)="editPatient(
+                                                    username!,
+                                                    patient.id,
+                                                    patient.patientId,
+                                                    patient.name,
+                                                    patient.implant,
+                                                    patient.attendingDentist,
+                                                    patient.age,
+                                                    patient.phone,
+                                                    patient.numOfImplants,
+                                                    patient.diabetes,
+                                                    patient.allergy,
+                                                    patient.hypertension,
+                                                    patient.gender , 
+                                                    patient.feedback,
+                                                    patient.lastVisitDate,
+                                                    patient.image)">
+
+                                </button>
+
+                                <button class="edit-delete-btn delete" (click)="deletePatient(patient)"></button>
+
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+
+        </div>
+
+
+
+
+    </div>
+
+
+
+</div>

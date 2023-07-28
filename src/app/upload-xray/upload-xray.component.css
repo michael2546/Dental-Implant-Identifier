@@ -1,0 +1,325 @@
+.upload-xray {
+    background-color: rgb(153, 194, 195);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    height: 5rem;
+    background-color: transparent;
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+}
+
+.ai2 {
+    color: #f8fbfb;
+    font-size: 1.5rem;
+    font-weight: 900;
+    margin-top: 0%;
+
+}
+
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+
+
+}
+
+.logo img {
+    width: 60px;
+    height: 50px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    color: #affcff;
+    font-weight: 900;
+}
+
+.logo2 {
+    font-size: 1.5rem;
+    color: #01575a;
+    font-weight: 900;
+    margin-left: 65px;
+    margin-top: 20px;
+    position: fixed;
+}
+
+span {
+    border-bottom: 3px solid #f8fbfb;
+}
+
+
+/* --------------------------------------------- */
+
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+.content {
+
+    margin-top: 50px;
+    margin-left: 40px;
+    background-color: rgba(255, 255, 255, 0.496);
+    width: 30%;
+    min-height: 88vh;
+    border-radius: 30px;
+    box-shadow: 0px 0px 14px 0px rgb(237, 237, 237);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.img {
+    background-image: url("src/assets/images/pngegg3c.png");
+    width: 230px;
+    height: 250px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 5px;
+    right: 0;
+
+
+}
+
+
+
+#image_input::file-selector-button {
+    border: none;
+    width: 150px;
+    height: 50px;
+    border: 0;
+    outline: 0;
+    border-radius: 30px;
+    height: 50px;
+    background-color: rgb(31, 171, 173);
+    color: white;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: 0.2s;
+    margin-top: 0.5rem;
+
+
+}
+
+#image_input::file-selector-button:hover {
+    background-color: rgb(36, 192, 195);
+}
+
+/* -------------------------------------------- */
+
+
+.prev-and-result {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 70%;
+    height: 90vh;
+    flex-wrap: wrap;
+}
+
+.head2 {
+    color: rgb(4, 91, 97);
+    font-size: 1.3rem;
+    text-align: center;
+    margin-bottom: 10px;
+
+
+}
+
+.head3 {
+    color: rgb(4, 91, 97);
+    font-size: 1.3rem;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-left: 50px;
+
+}
+
+.preview {
+    background-size: cover;
+    width: 24rem;
+    height: 60vh;
+    background-color: rgba(255, 255, 255, 0.496);
+    border-radius: 30px;
+    box-shadow: 0px 0px 14px 0px rgb(237, 237, 237);
+}
+
+
+.result {
+    width: 24rem;
+    height: 60vh;
+    margin-left: 60px;
+    background-color: rgba(255, 255, 255, 0.496);
+    border-radius: 30px;
+    box-shadow: 0px 0px 14px 0px rgb(237, 237, 237);
+    background-size: cover;
+}
+
+.head {
+    text-align: center;
+    color: rgb(4, 91, 97);
+    font-size: 1.3rem;
+    padding-top: 20px;
+}
+
+
+
+
+
+.result-btn {
+    width: 90%;
+    height: 50px;
+    border-radius: 30px;
+    outline: 0;
+    border: 0;
+    background-color: rgb(31, 171, 173);
+    color: white;
+    font-weight: 800;
+    font-size: 1rem;
+    margin-left: 0px;
+    display: block;
+    cursor: pointer;
+    transition: 0.2s;
+    margin-top: 1.1rem;
+    margin-bottom: 1.1rem;
+}
+
+.result-btn:hover {
+    background-color: rgb(36, 192, 195);
+
+}
+
+.register {
+    margin-left: 35px;
+    margin-bottom: 15px;
+}
+
+.register a {
+    color: rgb(4, 91, 97);
+    cursor: pointer;
+    font-weight: 700;
+}
+
+
+
+.register2 {
+    margin-left: 140px;
+    margin-bottom: 15px;
+    position: fixed;
+}
+
+.register2 a {
+    color: rgb(4, 91, 97);
+    cursor: pointer;
+    font-weight: 700;
+    position: fixed;
+}
+
+.register3 {
+    margin-left: 140px;
+    margin-top: 20px;
+    position: fixed;
+}
+
+.register3 a {
+    color: rgb(4, 91, 97);
+    cursor: pointer;
+    font-weight: 700;
+    position: fixed;
+}
+
+
+.logo3 img {
+    width: 25px;
+    height: 25px;
+    margin-left: 3px;
+    margin-top: 0px;
+    position: relative;
+}
+
+
+
+.gif-preview {
+    display: none;
+    top: 0;
+    right: 0;
+    position: fixed;
+    top: 20px;
+    left: 500px;
+    z-index: 99;
+    width: 95%;
+    height: 95%;
+    background-image: url("src/assets/images/vid.gif");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+/* Position the GIF preview relative to the hovered element */
+.con {
+    position: relative;
+    text-decoration: none;
+
+}
+
+/* Show the GIF when hovering over the container */
+.con:hover .gif-preview {
+    display: block;
+}
+
+.gif-preview2 {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    position: fixed;
+    top: 20px;
+    left: 500px;
+    z-index: 99;
+    width: 95%;
+    height: 95%;
+    background-image: url("src/assets/images/vid2.gif");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.con2 {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+
+}
+
+.con2:hover .gif-preview2 {
+    display: block;
+}
+
+.result-txt-container {
+    color: rgb(4, 91, 97);
+    font-weight: 750;
+    text-align: center;
+    width: 100%;
+
+}
+
+.result-txt {
+    font-size: 2rem;
+}
+
+.result-txt2 {
+    font-size: 3.5rem;
+}

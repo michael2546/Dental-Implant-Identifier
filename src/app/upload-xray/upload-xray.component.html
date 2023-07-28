@@ -1,0 +1,71 @@
+<div class="upload-xray">
+
+    <nav>
+        <a (click)="homeRouter()" class="logo">
+            <img src="assets/images/logo2.png" alt="Logo"> </a>
+
+        <a (click)="homeRouter()" class="logo2">
+            IMPLANT<span class="ai2">MIND</span>
+        </a>
+    </nav>
+
+    <div class="container">
+        <div class="content">
+
+            <h3 class="head">Here you can Upload Implant X-ray!</h3>
+            <div class="img"></div>
+            <form (submit)="onSubmit()">
+                <input #fileInput type="file" id="image_input" (change)="fileChanged($event)">
+                <button #resultBtn type="submit" class="result-btn">Predict</button>
+
+                <p class="register">
+
+                    <a href="https://image.online-convert.com/convert-to-jpg" target="_blank" class="con"
+                        onmouseover="showGifPreview(event)" onmouseout="hideGifPreview(event)">How to Input Image 💡
+                        <video class="gif-preview" src="src/assets/images/vid.gif" alt=""></video>
+                    </a>
+
+                </p>
+                <p class="register"> <a class="con2" onmouseover="showGifPreview2(event)"
+                        onmouseout="hideGifPreview2(event)">About Prediction Result 💭
+                        <video class="gif-preview2" src="src/assets/images/vid2.gif" alt=""></video>
+                    </a></p>
+
+                <!-- *ngIf="mb" -->
+
+                <div *ngIf="mb">
+                    <p class="register"> <a class="logo3" (click)="downloadImage()">Save result image<img
+                                src="assets/images/d2.png" alt="Logo"> </a>
+                    </p>
+                    <p class="register"> <a href="#Supported-implants">{{m}} 🦷 </a></p>
+                    <p class="register"> <a (click)="signUp()">Keep patient’s data 📝</a></p>
+                </div>
+            </form>
+        </div>
+
+        <div class="prev-and-result">
+
+            <div class="preview-container">
+                <h1 class="head2">X-ray Preview</h1>
+                <div #imageElement class="preview"></div>
+            </div>
+
+            <div #resultBox class="result-container">
+                <h1 class="head3">X-ray Prediction</h1>
+                <div class="result">
+
+                </div>
+            </div>
+
+            <div *ngIf="label" class="result-txt-container">
+                <p class="result-txt"> The Implant System in X-ray is: </p>
+                <p class="result-txt2">" {{label}} .. {{confd}}"</p>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+</div>

@@ -1,0 +1,23 @@
+<app-navbar></app-navbar>
+
+<div class="contain">
+    <div class="valid" *ngIf="showSuccessMessage">{{successMessage}}</div>
+    <div class="invalid" *ngIf="showErrorMessage">{{errorMessage}}</div>
+    <div class="rate">
+        <div class="box">
+            <p class="ff">We would like your feedback to improve our service.</p>
+            <p class="ff2">What is your opinion?</p>
+            <div class="emoji one" [class.clicked]="isClicked1" (click)="setRating(1)"></div>
+            <div class="emoji two" [class.clicked]="isClicked2" (click)="setRating2(2)"></div>
+            <div class="emoji three" [class.clicked]="isClicked3" (click)="setRating3(3)"></div>
+            <div class="emoji four" [class.clicked]="isClicked4" (click)="setRating4(4)"></div>
+            <div class="emoji five" [class.clicked]="isClicked5" (click)="setRating5(5)"></div>
+        </div>
+    </div>
+    <form (ngSubmit)="onSubmit()">
+        <p class="ff3">Please leave your feedback below :</p>
+        <textarea id="feedback" name="feedback" rows="5" cols="80" [(ngModel)]="feedback"
+            placeholder="Feedback"></textarea>
+    </form>
+    <button (click)="onSubmit()">Submit</button>
+</div>

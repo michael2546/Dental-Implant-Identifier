@@ -1,0 +1,46 @@
+<app-navbar></app-navbar>
+<div class="contain">
+    <div class="content">
+        <div class="container center">
+            <div class="section">
+                <h2 class="section-heading">Why Support</h2>
+                <p>For more accurate prediction, the deep learning model should be trained on as large a dataset as
+                    possible.
+                    This allows the model to distinguish the features and characteristics of each implant more
+                    effectively.
+                </p>
+                <p>Our goal is to increase the number of supported implant types that our model can predict. To achieve
+                    this, we
+                    need to collect new labeled implant image data.</p>
+            </div>
+            <div class="section">
+                <h2 class="section-heading">How to Support</h2>
+                <p>To support our project, please follow these steps:</p>
+                <ol>
+                    <li>Select an implant image from your device</li>
+                    <li>Enter the implant type in the field provided</li>
+                    <li>Click the submit button</li>
+                </ol>
+            </div>
+            <div class="section">
+                <h2 class="section-heading">Support Form</h2>
+                <form class="support-form" (submit)="onSubmit($event)">
+                    <div class="form-group">
+                        <label for="type">Implant Type:</label>
+                        <input type="text" id="type" name="type" [(ngModel)]="type" required [disabled]="submitted">
+                    </div>
+                    <div class="form-group">
+                        <label for="img">Implant Image:</label>
+                        <input type="file" id="img" name="img" (change)="onFileChange($event)" required
+                            [disabled]="submitted">
+                    </div>
+                    <button type="submit" [disabled]="submitted">Submit</button>
+                    <div class="support-message" *ngIf="submitted">
+                        <p>Thank you for your support!</p>
+                        <p>Reload the page to upload new image.</p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

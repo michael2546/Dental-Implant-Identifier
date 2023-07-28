@@ -1,0 +1,28 @@
+<nav #navbar>
+    <a (click)="homeRouter()" class="logo"><img src="assets/images/logo2.png" alt="Logo"> </a>
+
+    <a (click)="homeRouter()" class="logo2">
+        IMPLANT<span class="ai2">MIND</span>
+    </a>
+
+    <ul>
+        <a href="#home">
+            <li>Home</li>
+        </a>
+        <a href="#about">
+            <li>About Us</li>
+        </a>
+        <a href="#Supported-implants">
+            <li>Supported Implants</li>
+        </a>
+        <a (click)="signInRouter()">
+            <li>SignIn </li>
+        </a>
+        <a (click)="signUpRouter()">
+            <li>SignUp </li>
+        </a>
+        <a (click)="supportUsRouter()">
+            <li>Support Us</li>
+        </a>
+    </ul>
+</nav>

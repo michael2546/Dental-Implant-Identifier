@@ -1,0 +1,61 @@
+<nav>
+    <a (click)="homeRouter()" class="logo"><img src="assets/images/logo2.png" alt="Logo"> </a>
+
+    <a (click)="homeRouter()" class="logo2">
+        IMPLANT<span class="ai2">MIND</span>
+    </a>
+</nav>
+<!-- -------------------------------------------------------------- Sign In ---------------------------------------------------------------->
+
+<div class="container">
+    <div class="container2" id="container">
+
+        <div class="form-container sign-up-container">
+            <form (ngSubmit)="onSubmit()" action="#">
+                <h1>Sign in</h1>
+                <div class="invalid" *ngIf="showErrorMessage2">{{errorMessage2}}</div>
+                <input type="email" placeholder=" ✒️ Username" [(ngModel)]="username" name="username" />
+                <input type="password" placeholder=" 🔐 Password" [(ngModel)]="password" name="password" />
+                <br>
+                <button type="submit" (click)="toProfile(username!,password!)">Sign In</button>
+            </form>
+        </div>
+
+        <!-- -------------------------------------------------------------- Sign Up ---------------------------------------------------------------->
+        <div class="form-container sign-in-container">
+            <form>
+                <h1>Create Account</h1>
+                <div class="valid" *ngIf="showSuccessMessage">{{successMessage}}</div>
+                <div class="invalid2" *ngIf="showErrorMessage">{{errorMessage}}</div>
+                <input type="text" id="first_name" placeholder=" ▻ First Name" />
+                <input type="text" id="last_name" placeholder=" ▻ Last Name" />
+                <input type="text" id="username" placeholder=" ✒️ Username" />
+                <input type="email" id="email" placeholder=" ✉️ Email" />
+                <input type="password" id="password" placeholder=" 🔐 Password" name="password" />
+                <input type="password" id="repassword" placeholder=" 🔐 Password Confirmation" name="password" />
+                <br>
+                <button type="submit" (click)="register()">Sign Up</button>
+            </form>
+        </div>
+
+        <!-- -------------------------------------------------------------- Overlay ---------------------------------------------------------------->
+
+
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1 class="over">Hello!</h1>
+                    <p>Enter your personal details and start journey with us</p>
+                    <br><br>
+                    <button class="ghost" id="signUp" (click)="onSignUpButtonClick()">Sign Up</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1 class="over">Welcome Back!</h1>
+                    <p>To keep connected with us please login with your personal info</p>
+                    <br><br>
+                    <button class="ghost" id="signIn" (click)="onSignInButtonClick()">Sign In</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

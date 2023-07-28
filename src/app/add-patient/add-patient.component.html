@@ -1,0 +1,117 @@
+<div class="add-new-patient">
+
+    <div class="add-container">
+
+
+        <div class="head-exit">
+
+            <h1 class="head">Add New Patient </h1>
+            <a class='exit' (click)="myPatients()">✖️</a>
+
+        </div>
+
+        <div class="valid" *ngIf="showSuccessMessage">{{successMessage}}</div>
+        <div class="invalid" *ngIf="showErrorMessage">{{errorMessage}}</div>
+
+        <div class="flex-contain">
+
+            <form class="form-tag" (ngSubmit)="addPatient()" #patientForm="ngForm">
+
+                <div class="left-form">
+                    <label for="name">Patient name :</label>
+                    <input type="text" id="name" name="name" [(ngModel)]="patient.name" required>
+
+                    <label for="patientId">Patient Id :</label>
+                    <input type="text" id="patientId" name="patientId" [(ngModel)]="patient.patientId" required>
+
+                    <label for="attendingDentist">Attending Dentist :</label>
+                    <input type="text" id="attendingDentist" name="attendingDentist"
+                        [(ngModel)]="patient.attendingDentist" required>
+
+                    <label for="age">Age :</label>
+                    <input type="number" id="age" name="age" placeholder="" [(ngModel)]="patient.age" required>
+
+                    <label for="phone">Phone :</label>
+                    <input type="number" id="phone" name="phone" placeholder="" [(ngModel)]="patient.phone" required>
+
+                    <label for="implant">Implant Type :</label>
+                    <input type="text" id="implant" name="implant" placeholder="" [(ngModel)]="patient.implant"
+                        required>
+
+                    <label for="numOfImplants">Number Of Implants :</label>
+                    <input type="number" id="numOfImplants" name="numOfImplants" placeholder=""
+                        [(ngModel)]="patient.numOfImplants" required>
+
+                </div>
+
+
+                <div class="right-form">
+
+                    <label for="xray">Implant X-ray Image :
+                        <input type="file" id="xray" name="image" (change)="onFileSelected($event)" class="upload-img"
+                            required>
+                    </label>
+
+                    <label for="feedback">Diagnosis :
+                        <br>
+                        <textarea id="feedback" name="feedback" [(ngModel)]="patient.feedback"></textarea>
+                    </label>
+                    <label for="lastVisitDate">Last visit date :
+                        <br>
+                        <input type="datetime" id="lastVisitDate" name="lastVisitDate"
+                            [(ngModel)]="patient.lastVisitDate" required>
+                    </label>
+
+
+
+                    <label>
+                        Diabetes
+                        : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="radio" name="diabetes" [(ngModel)]="patient.diabetes" value="true">
+                        Yes&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="radio" name="diabetes" [(ngModel)]="patient.diabetes" value="false">
+                        No
+                    </label>
+
+                    <label>
+                        Hypertension : &nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="radio" name="Hypertension" [(ngModel)]="patient.hypertension" value="true">
+                        Yes&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="radio" name="Hypertension" [(ngModel)]="patient.hypertension" value="false">
+                        No
+                    </label>
+
+                    <label>
+                        Allergy
+                        :
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="radio" name="Allergy" [(ngModel)]="patient.allergy" value="true">
+                        Yes&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="radio" name="Allergy" [(ngModel)]="patient.allergy" value="false">
+                        No
+                    </label>
+
+                    <label>
+                        Gender
+                        : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="radio" name="gender" [(ngModel)]="patient.gender" value="Male">
+                        Male&nbsp;&nbsp;&nbsp;
+                        <input type="radio" name="gender" [(ngModel)]="patient.gender" value="Female"> Female
+                    </label>
+
+                </div>
+
+
+                <button type="submit" [disabled]="!patientForm.form.valid" class="add-button">Add</button>
+
+            </form>
+
+
+            <div class="img"></div>
+
+
+        </div>
+
+
+    </div>
+</div>

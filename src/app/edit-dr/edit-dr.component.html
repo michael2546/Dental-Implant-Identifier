@@ -1,0 +1,38 @@
+<div class="add-new-patient">
+
+    <div class="add-container">
+        <div class="head-exit">
+            <h1 class="head">Change my Info</h1>
+            <a class='exit' (click)="prof()">✖️</a>
+        </div>
+        <div class="valid" *ngIf="showSuccessMessage">{{successMessage}}</div>
+        <div class="invalid" *ngIf="showErrorMessage">{{errorMessage}}</div>
+        <div class="flex-contain">
+
+            <form class="form-tag" (submit)="Update(doctorInfo)">
+                <label for="first_name">First Name:</label>
+                <input type="text" id="firs_name" name="first_name" [(ngModel)]="doctorInfo.first_name">
+
+                <label for="last_name">Last Name:</label>
+                <input type="text" id="last_name" name="last_name" [(ngModel)]="doctorInfo.last_name">
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" [(ngModel)]="doctorInfo.email">
+
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" [(ngModel)]="username">
+
+                <label for="password">New Password:</label>
+                <input type="password" id="password" name="password" [(ngModel)]="doctorInfo.password">
+
+                <label for="repassword">Repeat New Password:</label>
+                <input type="password" id="repassword" name="repassword">
+
+                <button type="submit" class="add-button">Update</button>
+                <button type="submit" class="delete-button" (click)="Delete(doctorInfo.username)">Delete my
+                    account</button>
+            </form>
+            <div class="img"></div>
+        </div>
+    </div>
+</div>
